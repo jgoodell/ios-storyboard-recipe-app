@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		541A406E1768AF7F00BCE484 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 541A406D1768AF7F00BCE484 /* UIKit.framework */; };
+		541A40701768AF7F00BCE484 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 541A406F1768AF7F00BCE484 /* Foundation.framework */; };
+		541A40721768AF7F00BCE484 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 541A40711768AF7F00BCE484 /* CoreGraphics.framework */; };
+		541A40781768AF7F00BCE484 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 541A40761768AF7F00BCE484 /* InfoPlist.strings */; };
+		541A407A1768AF7F00BCE484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 541A40791768AF7F00BCE484 /* main.m */; };
+		541A407E1768AF7F00BCE484 /* PRPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 541A407D1768AF7F00BCE484 /* PRPAppDelegate.m */; };
+		541A40801768AF7F00BCE484 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 541A407F1768AF7F00BCE484 /* Default.png */; };
+		541A40821768AF7F00BCE484 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 541A40811768AF7F00BCE484 /* Default@2x.png */; };
+		541A40841768AF7F00BCE484 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 541A40831768AF7F00BCE484 /* Default-568h@2x.png */; };
+		541A40871768AF7F00BCE484 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541A40851768AF7F00BCE484 /* MainStoryboard.storyboard */; };
+		541A40A11768B06D00BCE484 /* cookies_tn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 541A40901768B06D00BCE484 /* cookies_tn.jpg */; };
+		541A40A21768B06D00BCE484 /* cookies_tn1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 541A40911768B06D00BCE484 /* cookies_tn1.jpg */; };
+		541A40A31768B06D00BCE484 /* cookies_tn2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 541A40921768B06D00BCE484 /* cookies_tn2.jpg */; };
+		541A40A41768B06D00BCE484 /* cookies_tn3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 541A40931768B06D00BCE484 /* cookies_tn3.jpg */; };
+		541A40A51768B06D00BCE484 /* cookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 541A40941768B06D00BCE484 /* cookies.jpg */; };
+		541A40A61768B06D00BCE484 /* cookies1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 541A40951768B06D00BCE484 /* cookies1.jpg */; };
+		541A40A71768B06D00BCE484 /* cookies2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 541A40961768B06D00BCE484 /* cookies2.jpg */; };
+		541A40A81768B06D00BCE484 /* cookies3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 541A40971768B06D00BCE484 /* cookies3.jpg */; };
+		541A40A91768B06D00BCE484 /* PRPRecipesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541A40991768B06D00BCE484 /* PRPRecipesListViewController.m */; };
+		541A40AA1768B06D00BCE484 /* PRPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541A409B1768B06D00BCE484 /* PRPViewController.m */; };
+		541A40AB1768B06D00BCE484 /* PRPRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 541A409D1768B06D00BCE484 /* PRPRecipe.m */; };
+		541A40AC1768B06D00BCE484 /* PRPRecipesSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 541A40A01768B06D00BCE484 /* PRPRecipesSource.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		541A406A1768AF7F00BCE484 /* StoryboardRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryboardRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		541A406D1768AF7F00BCE484 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		541A406F1768AF7F00BCE484 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		541A40711768AF7F00BCE484 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		541A40751768AF7F00BCE484 /* StoryboardRecipes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoryboardRecipes-Info.plist"; sourceTree = "<group>"; };
+		541A40771768AF7F00BCE484 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		541A40791768AF7F00BCE484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		541A407B1768AF7F00BCE484 /* StoryboardRecipes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoryboardRecipes-Prefix.pch"; sourceTree = "<group>"; };
+		541A407C1768AF7F00BCE484 /* PRPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRPAppDelegate.h; sourceTree = "<group>"; };
+		541A407D1768AF7F00BCE484 /* PRPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRPAppDelegate.m; sourceTree = "<group>"; };
+		541A407F1768AF7F00BCE484 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		541A40811768AF7F00BCE484 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		541A40831768AF7F00BCE484 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		541A40861768AF7F00BCE484 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		541A40901768B06D00BCE484 /* cookies_tn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cookies_tn.jpg; path = ../cookies_tn.jpg; sourceTree = "<group>"; };
+		541A40911768B06D00BCE484 /* cookies_tn1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cookies_tn1.jpg; path = ../cookies_tn1.jpg; sourceTree = "<group>"; };
+		541A40921768B06D00BCE484 /* cookies_tn2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cookies_tn2.jpg; path = ../cookies_tn2.jpg; sourceTree = "<group>"; };
+		541A40931768B06D00BCE484 /* cookies_tn3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cookies_tn3.jpg; path = ../cookies_tn3.jpg; sourceTree = "<group>"; };
+		541A40941768B06D00BCE484 /* cookies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cookies.jpg; path = ../cookies.jpg; sourceTree = "<group>"; };
+		541A40951768B06D00BCE484 /* cookies1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cookies1.jpg; path = ../cookies1.jpg; sourceTree = "<group>"; };
+		541A40961768B06D00BCE484 /* cookies2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cookies2.jpg; path = ../cookies2.jpg; sourceTree = "<group>"; };
+		541A40971768B06D00BCE484 /* cookies3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cookies3.jpg; path = ../cookies3.jpg; sourceTree = "<group>"; };
+		541A40981768B06D00BCE484 /* PRPRecipesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PRPRecipesListViewController.h; path = ../PRPRecipesListViewController.h; sourceTree = "<group>"; };
+		541A40991768B06D00BCE484 /* PRPRecipesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PRPRecipesListViewController.m; path = ../PRPRecipesListViewController.m; sourceTree = "<group>"; };
+		541A409A1768B06D00BCE484 /* PRPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PRPViewController.h; path = ../PRPViewController.h; sourceTree = "<group>"; };
+		541A409B1768B06D00BCE484 /* PRPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PRPViewController.m; path = ../PRPViewController.m; sourceTree = "<group>"; };
+		541A409C1768B06D00BCE484 /* PRPRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PRPRecipe.h; path = ../PRPRecipe.h; sourceTree = "<group>"; };
+		541A409D1768B06D00BCE484 /* PRPRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PRPRecipe.m; path = ../PRPRecipe.m; sourceTree = "<group>"; };
+		541A409E1768B06D00BCE484 /* PRPRecipesListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PRPRecipesListDataSource.h; path = ../PRPRecipesListDataSource.h; sourceTree = "<group>"; };
+		541A409F1768B06D00BCE484 /* PRPRecipesSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PRPRecipesSource.h; path = ../PRPRecipesSource.h; sourceTree = "<group>"; };
+		541A40A01768B06D00BCE484 /* PRPRecipesSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PRPRecipesSource.m; path = ../PRPRecipesSource.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		541A40671768AF7F00BCE484 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				541A406E1768AF7F00BCE484 /* UIKit.framework in Frameworks */,
+				541A40701768AF7F00BCE484 /* Foundation.framework in Frameworks */,
+				541A40721768AF7F00BCE484 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		541A40611768AF7E00BCE484 = {
+			isa = PBXGroup;
+			children = (
+				541A40731768AF7F00BCE484 /* StoryboardRecipes */,
+				541A406C1768AF7F00BCE484 /* Frameworks */,
+				541A406B1768AF7F00BCE484 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		541A406B1768AF7F00BCE484 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				541A406A1768AF7F00BCE484 /* StoryboardRecipes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		541A406C1768AF7F00BCE484 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				541A406D1768AF7F00BCE484 /* UIKit.framework */,
+				541A406F1768AF7F00BCE484 /* Foundation.framework */,
+				541A40711768AF7F00BCE484 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		541A40731768AF7F00BCE484 /* StoryboardRecipes */ = {
+			isa = PBXGroup;
+			children = (
+				541A40981768B06D00BCE484 /* PRPRecipesListViewController.h */,
+				541A40991768B06D00BCE484 /* PRPRecipesListViewController.m */,
+				541A409A1768B06D00BCE484 /* PRPViewController.h */,
+				541A409B1768B06D00BCE484 /* PRPViewController.m */,
+				541A409C1768B06D00BCE484 /* PRPRecipe.h */,
+				541A409D1768B06D00BCE484 /* PRPRecipe.m */,
+				541A409E1768B06D00BCE484 /* PRPRecipesListDataSource.h */,
+				541A409F1768B06D00BCE484 /* PRPRecipesSource.h */,
+				541A40A01768B06D00BCE484 /* PRPRecipesSource.m */,
+				541A407C1768AF7F00BCE484 /* PRPAppDelegate.h */,
+				541A407D1768AF7F00BCE484 /* PRPAppDelegate.m */,
+				541A40851768AF7F00BCE484 /* MainStoryboard.storyboard */,
+				541A40741768AF7F00BCE484 /* Supporting Files */,
+			);
+			path = StoryboardRecipes;
+			sourceTree = "<group>";
+		};
+		541A40741768AF7F00BCE484 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				541A40901768B06D00BCE484 /* cookies_tn.jpg */,
+				541A40911768B06D00BCE484 /* cookies_tn1.jpg */,
+				541A40921768B06D00BCE484 /* cookies_tn2.jpg */,
+				541A40931768B06D00BCE484 /* cookies_tn3.jpg */,
+				541A40941768B06D00BCE484 /* cookies.jpg */,
+				541A40951768B06D00BCE484 /* cookies1.jpg */,
+				541A40961768B06D00BCE484 /* cookies2.jpg */,
+				541A40971768B06D00BCE484 /* cookies3.jpg */,
+				541A40751768AF7F00BCE484 /* StoryboardRecipes-Info.plist */,
+				541A40761768AF7F00BCE484 /* InfoPlist.strings */,
+				541A40791768AF7F00BCE484 /* main.m */,
+				541A407B1768AF7F00BCE484 /* StoryboardRecipes-Prefix.pch */,
+				541A407F1768AF7F00BCE484 /* Default.png */,
+				541A40811768AF7F00BCE484 /* Default@2x.png */,
+				541A40831768AF7F00BCE484 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		541A40691768AF7F00BCE484 /* StoryboardRecipes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 541A408D1768AF7F00BCE484 /* Build configuration list for PBXNativeTarget "StoryboardRecipes" */;
+			buildPhases = (
+				541A40661768AF7F00BCE484 /* Sources */,
+				541A40671768AF7F00BCE484 /* Frameworks */,
+				541A40681768AF7F00BCE484 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StoryboardRecipes;
+			productName = StoryboardRecipes;
+			productReference = 541A406A1768AF7F00BCE484 /* StoryboardRecipes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		541A40621768AF7F00BCE484 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PRP;
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 541A40651768AF7F00BCE484 /* Build configuration list for PBXProject "StoryboardRecipes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 541A40611768AF7E00BCE484;
+			productRefGroup = 541A406B1768AF7F00BCE484 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				541A40691768AF7F00BCE484 /* StoryboardRecipes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		541A40681768AF7F00BCE484 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				541A40781768AF7F00BCE484 /* InfoPlist.strings in Resources */,
+				541A40801768AF7F00BCE484 /* Default.png in Resources */,
+				541A40821768AF7F00BCE484 /* Default@2x.png in Resources */,
+				541A40841768AF7F00BCE484 /* Default-568h@2x.png in Resources */,
+				541A40871768AF7F00BCE484 /* MainStoryboard.storyboard in Resources */,
+				541A40A11768B06D00BCE484 /* cookies_tn.jpg in Resources */,
+				541A40A21768B06D00BCE484 /* cookies_tn1.jpg in Resources */,
+				541A40A31768B06D00BCE484 /* cookies_tn2.jpg in Resources */,
+				541A40A41768B06D00BCE484 /* cookies_tn3.jpg in Resources */,
+				541A40A51768B06D00BCE484 /* cookies.jpg in Resources */,
+				541A40A61768B06D00BCE484 /* cookies1.jpg in Resources */,
+				541A40A71768B06D00BCE484 /* cookies2.jpg in Resources */,
+				541A40A81768B06D00BCE484 /* cookies3.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		541A40661768AF7F00BCE484 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				541A407A1768AF7F00BCE484 /* main.m in Sources */,
+				541A407E1768AF7F00BCE484 /* PRPAppDelegate.m in Sources */,
+				541A40A91768B06D00BCE484 /* PRPRecipesListViewController.m in Sources */,
+				541A40AA1768B06D00BCE484 /* PRPViewController.m in Sources */,
+				541A40AB1768B06D00BCE484 /* PRPRecipe.m in Sources */,
+				541A40AC1768B06D00BCE484 /* PRPRecipesSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		541A40761768AF7F00BCE484 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				541A40771768AF7F00BCE484 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		541A40851768AF7F00BCE484 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				541A40861768AF7F00BCE484 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		541A408B1768AF7F00BCE484 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		541A408C1768AF7F00BCE484 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		541A408E1768AF7F00BCE484 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StoryboardRecipes/StoryboardRecipes-Prefix.pch";
+				INFOPLIST_FILE = "StoryboardRecipes/StoryboardRecipes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		541A408F1768AF7F00BCE484 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StoryboardRecipes/StoryboardRecipes-Prefix.pch";
+				INFOPLIST_FILE = "StoryboardRecipes/StoryboardRecipes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		541A40651768AF7F00BCE484 /* Build configuration list for PBXProject "StoryboardRecipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				541A408B1768AF7F00BCE484 /* Debug */,
+				541A408C1768AF7F00BCE484 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		541A408D1768AF7F00BCE484 /* Build configuration list for PBXNativeTarget "StoryboardRecipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				541A408E1768AF7F00BCE484 /* Debug */,
+				541A408F1768AF7F00BCE484 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 541A40621768AF7F00BCE484 /* Project object */;
+}

@@ -105,15 +105,4 @@
 }
 */
 
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    PRPViewController *detailVC = [[PRPViewController alloc] initWithNibName:@"PRPViewController" bundle:nil];
-    detailVC.recipe = [self.dataSource recipeAtIndex:indexPath.row];
-    [detailVC setModalTransitionStyle: UIModalTransitionStyleFlipHorizontal];
-    NSLog(@"'%@' was tapped!", [detailVC.recipe title]);
-    [self presentViewController:detailVC animated:YES completion:nil];
-}
-
 @end

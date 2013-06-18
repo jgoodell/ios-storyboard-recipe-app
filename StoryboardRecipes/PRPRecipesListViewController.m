@@ -5,8 +5,10 @@
 //  Created by Goodell, Jason on 6/6/13.
 //
 
+#import "PRPRecipeEditorViewController.h"
 #import "PRPRecipesListViewController.h"
 #import "PRPViewController.h"
+#import "PRPRecipe.h"
 
 @interface PRPRecipesListViewController ()
 
@@ -47,6 +49,14 @@
     return 1;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self isEditing]) {
+        [self performSegueWithIdentifier:@"editRecipe" sender:indexPath];
+    } else {
+        [self performSegueWithIdentifier:@"presentRecipeDetail" sender:indexPath];
+    }
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.dataSource recipeCount];
@@ -67,14 +77,12 @@
     return cell;
 }
 
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
+    NSLog(@"conditional editing");
     return YES;
 }
-*/
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,6 +95,38 @@
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"prepare for segue");
+    if([@"presentRecipeDetail" isEqualToString:segue.identifier]) {
+        NSIndexPath *index = [self.tableView indexPathForCell:sender];
+        PRPRecipe *recipe = [self.dataSource recipeAtIndex:index.row];
+        [[segue destinationViewController] setRecipe:recipe];
+
+    }
+    if([@"addNewRecipe" isEqualToString:segue.identifier]) {
+        PRPRecipe *recipe = [self.dataSource createNewRecipe];
+        UIViewController *topVC = [[segue destinationViewController]
+                                   topViewController];
+        PRPRecipeEditorViewController *editor = (PRPRecipeEditorViewController *)topVC;
+        editor.recipeListVC = self;
+        editor.recipe = recipe;
+    }
+}
+
+- (void)finishedEditingRecipe:(PRPRecipe *)recipe {
+    NSUInteger row = [self.dataSource indexOfRecipe:recipe];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:path] withRowAnimation:UITableViewRowAnimationLeft];
+}
+
+- (IBAction)edit:(UIBarButtonItem *)sender {
+    if ([self isEditing]) {
+        [self setEditing:NO];
+    } else {
+        [self setEditing:YES];
+    }
 }
 
 /*

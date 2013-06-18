@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Zjv-a5-Tmt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Recipes List View Controller-->
+        <!--Recipes List View Controller - Recipes-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="PRPRecipesListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VsM-IP-1Ji">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="YjS-wx-Ip8" detailTextLabel="1Nh-pQ-hHj" imageView="rYS-a6-tPD" style="IBUITableViewCellStyleSubtitle" id="cU7-fo-9lS">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="YjS-wx-Ip8" detailTextLabel="1Nh-pQ-hHj" imageView="rYS-a6-tPD" style="IBUITableViewCellStyleSubtitle" id="cU7-fo-9lS">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjS-wx-Ip8">
@@ -37,6 +37,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="ERt-1J-hdr" kind="push" identifier="presentRecipeDetail" id="JgM-MA-mf5"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -44,18 +47,320 @@
                             <outlet property="delegate" destination="2" id="3Jb-Wu-Jug"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Recipes" id="d8Q-gV-Pfj">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="dTr-ql-hhm">
+                            <connections>
+                                <action selector="edit:" destination="2" id="fxH-RU-WO9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lqP-It-n6A">
+                            <connections>
+                                <segue destination="iLj-8P-BoL" kind="modal" identifier="addNewRecipe" id="07V-Ux-L9P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="434" y="204"/>
+        </scene>
+        <!--Directions Editor View Controller-->
+        <scene sceneID="wcx-pL-hGl">
+            <objects>
+                <viewController id="xIc-V9-ML6" customClass="PRPDirectionsEditorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iBG-hG-CdR">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEG-bp-04H">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xIc-V9-ML6" id="M5V-px-j9i"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GEG-bp-04H" firstAttribute="bottom" secondItem="iBG-hG-CdR" secondAttribute="bottom" type="default" id="3b0-Lf-hgP"/>
+                            <constraint firstItem="GEG-bp-04H" firstAttribute="leading" secondItem="iBG-hG-CdR" secondAttribute="leading" type="default" id="qif-la-lhk"/>
+                            <constraint firstItem="GEG-bp-04H" firstAttribute="trailing" secondItem="iBG-hG-CdR" secondAttribute="trailing" type="default" id="uX6-Uz-aIQ"/>
+                            <constraint firstItem="GEG-bp-04H" firstAttribute="top" secondItem="iBG-hG-CdR" secondAttribute="top" type="default" id="waw-F3-Iai"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UEZ-oT-RWk"/>
+                    <connections>
+                        <outlet property="textView" destination="GEG-bp-04H" id="yVb-Xa-PJD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xK-9Y-68J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401" y="-1240"/>
+        </scene>
+        <!--Recipe Editor View Controller - Edit Recipe-->
+        <scene sceneID="ySh-ww-PjC">
+            <objects>
+                <viewController id="DdQ-Ni-yRq" customClass="PRPRecipeEditorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ywv-mY-3mT">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Prep Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEU-nx-74U">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="7Jj-1z-4ud"/>
+                                    <constraint firstAttribute="height" constant="21" id="uSN-C5-InN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJC-T8-ABc">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DdQ-Ni-yRq" id="9r9-GF-t9Y"/>
+                                </connections>
+                            </textField>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OwY-3H-yGD">
+                                <connections>
+                                    <action selector="changePreparationTime:" destination="DdQ-Ni-yRq" eventType="valueChanged" id="W5P-d3-zxb"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXP-HZ-PpU">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="VOv-qq-2Fm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnu-XR-tJo">
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="v1r-sm-QI2"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="c1D-vG-Tc1" appends="YES" id="FYD-v8-qiO"/>
+                                </connections>
+                            </textView>
+                            <imageView contentMode="scaleToFill" image="cookies.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pRL-9f-Uno">
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="dLz-ss-lzY"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WkU-Cb-FQe" appends="YES" id="ubk-Ne-FpY"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75" green="0.68634778200000002" blue="0.57411437470000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="kEU-nx-74U" firstAttribute="top" secondItem="gXP-HZ-PpU" secondAttribute="top" type="default" id="0W0-c6-e27"/>
+                            <constraint firstItem="kEU-nx-74U" firstAttribute="leading" secondItem="ywv-mY-3mT" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="12f-OL-NHi"/>
+                            <constraint firstItem="AJC-T8-ABc" firstAttribute="leading" secondItem="ywv-mY-3mT" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5on-b1-oDb"/>
+                            <constraint firstAttribute="bottom" secondItem="pRL-9f-Uno" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="6p9-aB-5Mk"/>
+                            <constraint firstItem="AJC-T8-ABc" firstAttribute="top" secondItem="ywv-mY-3mT" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Aog-QF-2BE"/>
+                            <constraint firstAttribute="trailing" secondItem="pRL-9f-Uno" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="E8J-mG-t0o"/>
+                            <constraint firstItem="pRL-9f-Uno" firstAttribute="leading" secondItem="ywv-mY-3mT" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ir6-1g-dwD"/>
+                            <constraint firstItem="Gnu-XR-tJo" firstAttribute="leading" secondItem="ywv-mY-3mT" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JAN-Zh-hzf"/>
+                            <constraint firstAttribute="trailing" secondItem="Gnu-XR-tJo" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WKs-uF-dMg"/>
+                            <constraint firstAttribute="trailing" secondItem="AJC-T8-ABc" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ao8-pa-eKF"/>
+                            <constraint firstItem="gXP-HZ-PpU" firstAttribute="centerY" secondItem="OwY-3H-yGD" secondAttribute="centerY" type="default" id="db5-hn-OcN"/>
+                            <constraint firstAttribute="trailing" secondItem="OwY-3H-yGD" secondAttribute="trailing" constant="25" id="nc7-dp-L35"/>
+                            <constraint firstItem="gXP-HZ-PpU" firstAttribute="leading" secondItem="kEU-nx-74U" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="rHN-oA-Fbx"/>
+                            <constraint firstItem="gXP-HZ-PpU" firstAttribute="baseline" secondItem="kEU-nx-74U" secondAttribute="baseline" type="default" id="sXm-gq-ox3"/>
+                            <constraint firstItem="Gnu-XR-tJo" firstAttribute="top" secondItem="AJC-T8-ABc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tkR-rk-T0v"/>
+                            <constraint firstItem="pRL-9f-Uno" firstAttribute="top" secondItem="OwY-3H-yGD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tou-Fz-Sh8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Recipe" id="MBp-qN-dfd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="2Dr-X5-WjM">
+                            <connections>
+                                <action selector="done:" destination="DdQ-Ni-yRq" id="XyF-0V-R5H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="directionsText" destination="Gnu-XR-tJo" id="rR2-Q2-cv3"/>
+                        <outlet property="prepTimeLabel" destination="gXP-HZ-PpU" id="oR7-Er-tx8"/>
+                        <outlet property="prepTimeStepper" destination="OwY-3H-yGD" id="epd-wE-gKQ"/>
+                        <outlet property="recipeImage" destination="pRL-9f-Uno" id="6jO-3b-7wD"/>
+                        <outlet property="titleField" destination="AJC-T8-ABc" id="hxz-P0-N93"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2s-OY-plW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="c1D-vG-Tc1" userLabel="Directions Gesture Recognizer">
+                    <connections>
+                        <segue destination="xIc-V9-ML6" kind="push" identifier="editDirections" id="9o0-Lp-SGI"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WkU-Cb-FQe" userLabel="Image Gesture Recognizer">
+                    <connections>
+                        <segue destination="8iF-4O-TeF" kind="modal" identifier="choosePhoto" id="LAz-Cc-zKW"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1401" y="-497"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9ea-8g-SB8">
+            <objects>
+                <viewController id="ERt-1J-hdr" customClass="PRPViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iKT-gX-fMi">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Prep Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jha-sI-cf6">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="XPG-jK-xgQ"/>
+                                    <constraint firstAttribute="height" constant="21" id="d4e-P9-cNC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzc-Ve-bNa">
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seP-MS-ai4">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="vVy-aS-YfN"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35I-DQ-U1e">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="149" id="Ccq-MR-VoO"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75" green="0.68634778200000002" blue="0.57411437470000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wzc-Ve-bNa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3wa-FE-P9f"/>
+                            <constraint firstItem="Wzc-Ve-bNa" firstAttribute="baseline" secondItem="jha-sI-cf6" secondAttribute="baseline" type="default" id="8Na-8S-43o"/>
+                            <constraint firstItem="jha-sI-cf6" firstAttribute="leading" secondItem="iKT-gX-fMi" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="94f-P1-0m4"/>
+                            <constraint firstItem="jha-sI-cf6" firstAttribute="top" secondItem="iKT-gX-fMi" secondAttribute="top" constant="20" symbolic="YES" type="default" id="NZN-dA-Ydo"/>
+                            <constraint firstAttribute="trailing" secondItem="seP-MS-ai4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="XIu-UX-8rd"/>
+                            <constraint firstAttribute="trailing" secondItem="35I-DQ-U1e" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="aZk-Jy-eep"/>
+                            <constraint firstItem="seP-MS-ai4" firstAttribute="leading" secondItem="iKT-gX-fMi" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bwS-mB-Dwx"/>
+                            <constraint firstItem="Wzc-Ve-bNa" firstAttribute="top" secondItem="iKT-gX-fMi" secondAttribute="top" constant="20" symbolic="YES" type="default" id="dqW-ka-Lw9"/>
+                            <constraint firstAttribute="bottom" secondItem="seP-MS-ai4" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="hPc-cB-9Zu"/>
+                            <constraint firstItem="35I-DQ-U1e" firstAttribute="leading" secondItem="iKT-gX-fMi" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lfF-0N-Jh3"/>
+                            <constraint firstItem="Wzc-Ve-bNa" firstAttribute="leading" secondItem="jha-sI-cf6" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="wVs-Hk-uWe"/>
+                            <constraint firstItem="35I-DQ-U1e" firstAttribute="top" secondItem="jha-sI-cf6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="y7J-5w-ny9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3T8-Cg-mkq"/>
+                    <connections>
+                        <outlet property="directionView" destination="35I-DQ-U1e" id="cyU-rV-Fp8"/>
+                        <outlet property="imageView" destination="seP-MS-ai4" id="5cP-gi-FaM"/>
+                        <outlet property="prepTime" destination="Wzc-Ve-bNa" id="bOV-WJ-Jnk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R9K-Kw-ecv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="204"/>
+        </scene>
+        <!--Image Picker Controller-->
+        <scene sceneID="PWB-zp-V1r">
+            <objects>
+                <viewController id="8iF-4O-TeF" customClass="UIImagePickerController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R81-Ut-8ia">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EsF-3U-Th2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1397" y="203"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Gq1-lf-PTY">
+            <objects>
+                <navigationController id="Zjv-a5-Tmt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nYQ-nO-4B1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="XjG-at-rms"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPr-Gq-6BU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="-92" y="204"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LOS-iA-PTf">
+            <objects>
+                <navigationController id="iLj-8P-BoL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="1dY-Xn-7UF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ynw-SL-d6G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DdQ-Ni-yRq" kind="relationship" relationship="rootViewController" id="NwK-sa-GGa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSJ-tZ-C5j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="-497"/>
         </scene>
     </scenes>
     <resources>
         <image name="cookies.jpg" width="2592" height="2592"/>
     </resources>
     <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PRPDirectionsEditorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PRPDirectionsEditorViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="PRPRecipeEditorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PRPRecipeEditorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changePreparationTime:" candidateClass="UIStepper"/>
+                <relationship kind="action" name="done:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="directionsText" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="prepTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="prepTimeStepper" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="recipeImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
         <class className="PRPRecipesListViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PRPRecipesListViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="edit:" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="PRPViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PRPViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dismiss:"/>
+                <relationship kind="outlet" name="directionView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="prepTime" candidateClass="UILabel"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

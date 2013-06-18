@@ -53,6 +53,16 @@
     return _recipes;
 }
 
+- (NSUInteger)indexOfRecipe:(PRPRecipe *)recipe {
+    return [self.recipes indexOfObject:recipe];
+}
+
+- (PRPRecipe *)createNewRecipe {
+    PRPRecipe *recipe = [[PRPRecipe alloc] init];
+    [self.recipes addObject:recipe];
+    return recipe;
+}
+
 #pragma mark Recipe List Data Source Methods
 - (NSInteger)recipeCount {
     return [self.recipes count];

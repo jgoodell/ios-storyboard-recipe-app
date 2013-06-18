@@ -10,4 +10,7 @@
 
 @interface PRPRecipesListViewController : UITableViewController
 @property(nonatomic, strong) id <PRPRecipesListDataSource> dataSource;
+
+- (void)finishedEditingRecipe:(PRPRecipe *)recipe;
+- (IBAction)edit:(UIBarButtonItem *)sender;
 @end
